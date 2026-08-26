@@ -2,7 +2,7 @@
 
 class Product 
 {
-    public string $brand ;
+    public string $brand;
     public string $model;
     public float $price;
     public int $year;
