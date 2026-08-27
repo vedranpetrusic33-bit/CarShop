@@ -2,6 +2,7 @@
 
 class Product 
 {
+
     protected string $brand ;
     protected string $model;
     protected int $price;
@@ -85,6 +86,7 @@ public function setMileage(int $mileage): void
 {
     $this->mileage = $mileage;
 }
+
 
 }
 
