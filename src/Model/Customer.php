@@ -6,14 +6,14 @@ class Customer
     protected string $surname;
     protected string $email;
     protected string $phoneNumber;
-    protected string $address;
+    protected Address $address;
 
     public function __construct(
         string $name,
         string $surname,
         string $email,
         string $phoneNumber,
-        string $address
+        Address $address
     ) {
         $this->name = $name;
         $this->surname = $surname;
@@ -63,11 +63,11 @@ class Customer
     }
 
     //addres
-    public function getAddress(): string
+    public function getAddress(): Address
     {
         return $this->address;
     }
-    public function setAddress(string $address): void
+    public function setAddress(Address $address): void
     {
         $this->address = $address;
     }
