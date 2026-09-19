@@ -41,7 +41,7 @@ $product2 = new Product(
 $product3 = new Product(
     'Mercedes',
     'C-Class',
-    40000,
+    60000,
     2023,
     'Blue',
     20000
@@ -54,3 +54,10 @@ $order->addProduct($product2);
 $order->addProduct($product3);
 
 var_dump($order);
+
+echo "Product total: " . $order->getTotalPrice() . " €" . PHP_EOL;
+echo "Tax: " . PriceCalculator::calculateTax($order->getProducts()) . " €" . PHP_EOL;
+echo "Shipping: " . PriceCalculator::calculateShipping($order->getProducts()) . " €" . PHP_EOL;
+echo "Total: " . $order->getTotal() . " €" . PHP_EOL;
+
+?>
